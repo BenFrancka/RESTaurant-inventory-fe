@@ -8,3 +8,10 @@ export const addInventoryItem = async (url, data = {}) => {
   });
   return response.json();
 };
+
+export const fetchInventoryList = async (url) => {
+  const response = await fetch(url);
+  const inventory = await response.json();
+
+  return inventory;
+};
