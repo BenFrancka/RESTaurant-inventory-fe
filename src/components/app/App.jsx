@@ -4,7 +4,8 @@ import InventoryListContainer from '../../containers/InventoryListContainer';
 // eslint-disable-next-line max-len
 import InventoryUpdateContainer from '../../containers/InventoryUpdateContainer';
 // eslint-disable-next-line max-len
-import InventoryCreateContainer from '../../containers/InventoryCreateContainer';
+import AddItemToInventory from '../../containers/InventoryCreateContainer';
+
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         <InventoryListContainer />
       </Route>
       <Route exact path="/add">
-        <InventoryCreateContainer />
+        <AddItemToInventory />
       </Route>
     </Switch>
   );
