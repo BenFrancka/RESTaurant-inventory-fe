@@ -1,41 +1,30 @@
-import React { useState } from 'react';
+import React, { useState } from 'react';
 import InsertControls from '../components/inventory/InventoryAddItemControls';
+import { addInventoryItem } from '../services/inventoryUtils';
+import { useHistory } from 'react-router-dom';
 
 const AddItemToInventory = () => {
-    const [itemName, setItemName] = useState('');
-    const [category, setCategory] = useState('');
-    const [itemPrice, setItemPrice]= useState(0);
-    const [totalItems, setTotalItems] = useState(0);
-    const[totalPrice, setTotalPrice] = useState(0);
+  const [inventory, setInventory] = useState({});
 
+  const handleChange = ({ target }) => {
+    setInventory({ [target.name]: target.value });
+  };
 
-    const handleItemName = ({ target }) => {
-        setItemName(target.value);
-    };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const history = useHistory();
+    addInventoryItem('https://localhost.7890/api/v1/add', inventory).then(
+      history.push('/')
+    );
+  };
 
-    const handleCategory = ({ target }) => {
-        setCategory(target.value);
-    };
+  return (
+    <InsertControls
+      inventory={inventory}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
+    />
+  );
+};
 
-    const handleItemPrice = ({ target }) => {
-        setItemPrice(target.value);
-    };
-
-    const handleTotalItems = ({ target }) => {
-        setTotalItems(target.value);
-    };
-
-    const handleTotalPrice = ({ target }) => {
-        setTotalPrice(target.value);
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        
-
-
-    }
-
-
-}
-
+export default AddItemToInventory;
