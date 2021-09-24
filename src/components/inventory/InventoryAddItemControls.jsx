@@ -5,6 +5,7 @@ const InsertControls = ({ inventory, onChange, onSubmit }) => (
   <form onSubmit={onSubmit}>
     <label htmlFor="itemName">Item Name</label>
     <input
+      name="itemName"
       id="itemName"
       type="text"
       value={inventory.itemName}
@@ -12,6 +13,7 @@ const InsertControls = ({ inventory, onChange, onSubmit }) => (
     />
     <label htmlFor="category">Category</label>
     <input
+      name="category"
       id="category"
       type="text"
       value={inventory.category}
@@ -19,6 +21,7 @@ const InsertControls = ({ inventory, onChange, onSubmit }) => (
     />
     <label htmlFor="itemPrice">Item Price</label>
     <input
+      name="itemPrice"
       id="itemPrice"
       type="number"
       value={inventory.itemPrice}
@@ -26,6 +29,7 @@ const InsertControls = ({ inventory, onChange, onSubmit }) => (
     />
     <label htmlFor="totalItems">Total Items</label>
     <input
+      name="totalItems"
       id="totalItems"
       type="number"
       value={inventory.totalItems}
@@ -33,6 +37,7 @@ const InsertControls = ({ inventory, onChange, onSubmit }) => (
     />
     <label htmlFor="totalPrice">Total Price</label>
     <input
+      name="totalPrice"
       id="totalPrice"
       type="number"
       value={inventory.totalPrice}

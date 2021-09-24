@@ -13,11 +13,11 @@ export default function App() {
       <Route exact path="/:id">
         <InventoryUpdateContainer />
       </Route>
-      <Route exact path="/">
-        <InventoryListContainer />
-      </Route>
       <Route exact path="/add">
         <AddItemToInventory />
+      </Route>
+      <Route exact path="/">
+        <InventoryListContainer />
       </Route>
     </Switch>
   );
