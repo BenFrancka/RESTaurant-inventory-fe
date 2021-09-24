@@ -13,7 +13,7 @@ const InventoryList = ({ inventory }) => (
             category={inventoryItem.category}
             itemPrice={inventoryItem.itemPrice}
             totalItems={inventoryItem.totalItems}
-            totalPrice={inventoryItem.totalItems * inventoryItem.itemPrice}
+            totalPrice={inventoryItem.totalPrice}
           />
         </li>
       </Link>

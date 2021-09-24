@@ -14,7 +14,7 @@ const AddItemToInventory = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const history = useHistory();
-    addInventoryItem('https://localhost.7890/api/v1/inventory', inventory).then(
+    addInventoryItem(inventory).then(
       history.push('/')
     );
   };

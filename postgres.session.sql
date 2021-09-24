@@ -1,0 +1,1 @@
+INSERT INTO inventory (item_name, category, item_price, total_items, total_price) VALUES ('bacon', 'protein', 90, 1, 90) RETURNING *;

@@ -8,10 +8,10 @@ const InventoryListContainer = () => {
   const [inventory, setInvenentory] = useState([]);
 
   useEffect(() => {
-    fetchInventoryList('https://localhost.7890/api/v1/inventory')
-      .then((inventory) => setInvenentory(inventory))
+    fetchInventoryList()
+      .then((response) => setInvenentory(response))
       .finally(() => setLoading(false));
-  }, []);
+  }, [inventory]);
 
   if (loading) {
     return (
