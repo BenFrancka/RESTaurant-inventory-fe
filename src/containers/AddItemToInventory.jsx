@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InsertControls from '../components/inventory/InventoryAddItemControls';
+import Header from '../components/inventory/Header';
 import { addInventoryItem } from '../services/inventoryUtils';
 import { useHistory } from 'react-router-dom';
 
@@ -13,17 +14,20 @@ const AddItemToInventory = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const history = useHistory();
-    addInventoryItem('https://localhost.7890/api/v1/add', inventory).then(
+    addInventoryItem('https://localhost.7890/api/v1/inventory', inventory).then(
       history.push('/')
     );
   };
 
   return (
-    <InsertControls
-      inventory={inventory}
-      onChange={handleChange}
-      onSubmit={handleSubmit}
-    />
+    <>
+      <Header />
+      <InsertControls
+        inventory={inventory}
+        onChange={handleChange}
+        onSubmit={handleSubmit}
+      />
+    </>
   );
 };
 

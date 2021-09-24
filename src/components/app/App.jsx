@@ -4,7 +4,7 @@ import InventoryListContainer from '../../containers/InventoryListContainer';
 // eslint-disable-next-line max-len
 import InventoryUpdateContainer from '../../containers/InventoryUpdateContainer';
 // eslint-disable-next-line max-len
-import AddItemToInventory from '../../containers/InventoryCreateContainer';
+import AddItemToInventory from '../../containers/AddItemToInventory';
 
 
 export default function App() {
