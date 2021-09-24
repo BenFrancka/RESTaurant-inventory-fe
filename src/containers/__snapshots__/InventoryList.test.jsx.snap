@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AristSearch Container should display a list of current inventory items 1`] = `
+<div>
+  <h1>
+    RESTaurant Inventory 
+  </h1>
+  <h3>
+    <a
+      href="/add"
+    >
+      Add an Item
+    </a>
+  </h3>
+  <h3>
+    <a
+      href="/"
+    >
+      Return to Inventory
+    </a>
+  </h3>
+  <ul
+    aria-label="inventory-list"
+  >
+    <a
+      href="/1"
+    >
+      <li>
+        <h2>
+          potatoes
+        </h2>
+        <p>
+          produce
+        </p>
+        <p>
+          5
+        </p>
+        <p>
+          5
+        </p>
+        <p>
+          25
+        </p>
+      </li>
+    </a>
+    <a
+      href="/2"
+    >
+      <li>
+        <h2>
+          onions
+        </h2>
+        <p>
+          produce
+        </p>
+        <p>
+          20
+        </p>
+        <p>
+          1
+        </p>
+        <p>
+          20
+        </p>
+      </li>
+    </a>
+    <a
+      href="/3"
+    >
+      <li>
+        <h2>
+          bacon
+        </h2>
+        <p>
+          protein
+        </p>
+        <p>
+          90
+        </p>
+        <p>
+          1
+        </p>
+        <p>
+          90
+        </p>
+      </li>
+    </a>
+  </ul>
+</div>
+`;
