@@ -1,0 +1,26 @@
+[
+    {
+    "id": "1",
+    "itemName": "potatoes",
+    "category": "produce",
+    "itemPrice": 5,
+    "totalItems": 5,
+    "totalPrice": 25
+    },
+    {
+    "id": "2",
+    "itemName": "onions",
+    "category": "produce",
+    "itemPrice": 20,
+    "totalItems": 1,
+    "totalPrice": 20
+    },
+    {
+    "id": "3",
+    "itemName": "bacon",
+    "category": "protein",
+    "itemPrice": 90,
+    "totalItems": 1,
+    "totalPrice": 90
+    }
+    ]
