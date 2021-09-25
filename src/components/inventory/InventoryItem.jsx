@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './InventoryItem.css';
 
 const InventoryItem = ({
   itemName,
@@ -10,10 +11,10 @@ const InventoryItem = ({
 }) => (
   <>
     <h2>{itemName}</h2>
-    <p>{category}</p>
-    <p>{itemPrice}</p>
-    <p>{totalItems}</p>
-    <p>{totalPrice}</p>
+    <p>Category:{' '}{category}</p>
+    <p>Item Price:{' '}{itemPrice}</p>
+    <p>Total Items:{' '}{totalItems}</p>
+    <p>Total Price:{' '}{totalPrice}</p>
   </>
 );
 

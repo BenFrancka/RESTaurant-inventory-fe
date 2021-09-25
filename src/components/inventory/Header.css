@@ -1,0 +1,22 @@
+header {
+    border: solid black .5rem;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: left;
+    margin: 1rem;
+    font-size: 3rem;
+    color: darkblue;
+}
+
+h3 {
+    display: inline;
+    margin: 1rem;
+    text-align: center;
+}
+
+Link {
+    color:whitesmoke;
+}

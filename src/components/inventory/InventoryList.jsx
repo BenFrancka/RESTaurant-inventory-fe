@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import InventoryItem from './InventoryItem';
 import { Link } from 'react-router-dom';
+import './InventoryList.css';
 
 const InventoryList = ({ inventory }) => (
   <ul aria-label="inventory-list">
