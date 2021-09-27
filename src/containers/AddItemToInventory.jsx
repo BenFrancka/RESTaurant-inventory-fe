@@ -13,7 +13,6 @@ const AddItemToInventory = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //const history = useHistory();
     addInventoryItem(inventory);
   };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './InventoryAddItem.css';
 
 const InsertControls = ({ inventory, onChange, onSubmit }) => (
   <form onSubmit={onSubmit}>

@@ -1,0 +1,6 @@
+form {
+    display: flex;
+    flex-direction: column;
+    border: black .05rem solid;
+    background-color: lightgray;
+}

@@ -10,11 +10,11 @@ import AddItemToInventory from '../../containers/AddItemToInventory';
 export default function App() {
   return (
     <Switch>
-      <Route exact path="/:id">
-        <UpdateInventoryItemAmount />
-      </Route>
       <Route exact path="/add">
         <AddItemToInventory />
+      </Route>
+      <Route exact path="/:id">
+        <UpdateInventoryItemAmount />
       </Route>
       <Route exact path="/">
         <InventoryListContainer />
