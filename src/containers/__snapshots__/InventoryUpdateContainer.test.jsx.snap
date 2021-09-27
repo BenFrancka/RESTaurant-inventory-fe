@@ -31,7 +31,7 @@ exports[`inventory update screen displays current item 1`] = `
       id="totalItems"
       name="totalItems"
       type="number"
-      value=""
+      value="5"
     />
     <label
       for="totalPrice"
@@ -42,28 +42,34 @@ exports[`inventory update screen displays current item 1`] = `
       id="totalPrice"
       name="totalPrice"
       type="number"
-      value=""
+      value="25"
     />
   </form>
   <article
     aria-label="inventory item"
   >
-    <h2 />
+    <h2>
+      potatoes
+    </h2>
     <p>
       Category:
        
+      produce
     </p>
     <p>
       Item Price:
        
+      5
     </p>
     <p>
       Total Items:
        
+      5
     </p>
     <p>
       Total Price:
        
+      25
     </p>
   </article>
 </div>
