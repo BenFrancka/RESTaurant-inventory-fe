@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import InventoryItem from '../components/inventory/InventoryItem';
 import Header from '../components/inventory/Header';
-import { fetchInventoryItemById } from '../services/inventoryUtils';
+import {
+  fetchInventoryItemById,
+  updateInventoryItem,
+} from '../services/inventoryUtils';
 // eslint-disable-next-line max-len
 import InventoryUpdateControls from '../components/inventory/InventoryUpdateControls';
 
@@ -21,6 +24,17 @@ const UpdateInventoryItemAmount = () => {
     setInventoryItem({ [target.name]: target.value });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefalt();
+    updateInventoryItem({
+      itemName: inventoryItem.itemName,
+      category: inventoryItem.category,
+      itemPrice: inventoryItem.itemPrice,
+      totalItems: inventoryItem.totalItems,
+      totalPrice: inventoryItem.itemPrice * inventoryItem.totalItems,
+    });
+  };
+
   return (
     <>
       <Header />
@@ -35,6 +49,7 @@ const UpdateInventoryItemAmount = () => {
             totalItems={inventoryItem.totalItems}
             totalPrice={inventoryItem.totalPrice}
             onChange={handleChange}
+            onSubmit={handleSubmit}
           />
           <InventoryItem
             itemName={inventoryItem.itemName}
