@@ -5,7 +5,13 @@ import { addInventoryItem } from '../services/inventoryUtils';
 
 
 const AddItemToInventory = () => {
-  const [inventory, setInventory] = useState({});
+  const [inventory, setInventory] = useState({
+    itemName: 'type name here',
+    category: 'type category here',
+    itemPrice: 0,
+    totalItems: 0,
+    totalPrice: 0
+  });
 
   const handleChange = ({ target }) => {
     setInventory({ [target.name]: target.value });
