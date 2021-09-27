@@ -20,7 +20,11 @@ const AddItemToInventory = () => {
     <>
       <Header />
       <InsertControls
-        inventory={inventory}
+        itemName={inventory.itemName}
+        category={inventory.category}
+        itemPrice={inventory.itemPrice}
+        totalItems={inventory.totalItems}
+        totalPrice={inventory.totalPrice}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
