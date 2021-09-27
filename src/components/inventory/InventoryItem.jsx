@@ -9,13 +9,13 @@ const InventoryItem = ({
   totalItems,
   totalPrice,
 }) => (
-  <>
+  <article aria-label="inventory item">
     <h2>{itemName}</h2>
     <p>Category:{' '}{category}</p>
     <p>Item Price:{' '}{itemPrice}</p>
     <p>Total Items:{' '}{totalItems}</p>
     <p>Total Price:{' '}{totalPrice}</p>
-  </>
+  </article>
 );
 
 InventoryItem.propTypes = {

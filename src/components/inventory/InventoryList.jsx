@@ -25,7 +25,7 @@ const InventoryList = ({ inventory }) => (
 InventoryList.propTypes = {
   inventory: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       itemName: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
       itemPrice: PropTypes.number.isRequired,
