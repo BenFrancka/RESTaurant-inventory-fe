@@ -10,7 +10,7 @@ import {
 import InventoryUpdateControls from '../components/inventory/InventoryUpdateControls';
 
 const UpdateInventoryItemAmount = () => {
-  const { id } = useParams();
+  const { id, add } = useParams();
   const [loading, setLoading] = useState(true);
   const [inventoryItem, setInventoryItem] = useState({});
 
@@ -37,7 +37,7 @@ const UpdateInventoryItemAmount = () => {
 
   return (
     <>
-      <Header />
+      <Header add={add}/>
       {loading ? (
         <img
           src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif"

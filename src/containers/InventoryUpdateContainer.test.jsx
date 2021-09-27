@@ -7,7 +7,7 @@ import { setupServer } from 'msw/node';
 import item from '../fixtures/item.json';
 
 const server = setupServer(
-  rest.get('http://localhost:7890/api/v1/inventory', (req, res, ctx) => {
+  rest.get('http://localhost:7890/api/v1/inventory/:id', (req, res, ctx) => {
     return res(ctx.json(item));
   })
 );
@@ -16,9 +16,9 @@ describe('inventory update screen', () => {
   beforeAll(() => server.listen());
   afterAll(() => server.close());
 
-  it.skip('displays current item', async () => {
+  it('displays current item', async () => {
     const { container } = render(
-      <MemoryRouter>
+      <MemoryRouter initialEntries={['/1']}>
         <UpdateInventoryItemAmount />
       </MemoryRouter>
     );
