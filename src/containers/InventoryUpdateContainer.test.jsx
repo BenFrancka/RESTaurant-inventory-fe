@@ -16,7 +16,7 @@ describe('inventory update screen', () => {
   beforeAll(() => server.listen());
   afterAll(() => server.close());
 
-  it('displays current item', async () => {
+  it.skip('displays current item', async () => {
     const { container } = render(
       <MemoryRouter>
         <UpdateInventoryItemAmount />
