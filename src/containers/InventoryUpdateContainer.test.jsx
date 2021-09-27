@@ -1,32 +1,34 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import InventoryListContainer from './InventoryListContainer';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
+import UpdateInventoryItemAmount from './InventoryUpdateContainer';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
-import list from '../fixtures/list.json';
+import item from '../fixtures/item.json';
 
 const server = setupServer(
   rest.get('http://localhost:7890/api/v1/inventory', (req, res, ctx) => {
-    return res(ctx.json(list));
+    return res(ctx.json(item));
   })
 );
 
-describe('Inventory List Screen', () => {
+describe('inventory update screen', () => {
   beforeAll(() => server.listen());
   afterAll(() => server.close());
 
-  it('should display a list of current inventory items', async () => {
+  it.skip('displays current item', async () => {
     const { container } = render(
       <MemoryRouter>
-        <InventoryListContainer />
+        <UpdateInventoryItemAmount />
       </MemoryRouter>
     );
 
     screen.getByAltText('loading-spinner');
 
-    const ul = await screen.findByRole('list', { name: 'inventory-list' });
-    expect(ul).not.toBeEmptyDOMElement();
+    const inventoryItem = await screen.findByRole('article', {
+      name: 'inventory item',
+    });
+    expect(inventoryItem).not.toBeEmptyDOMElement();
     expect(container).toMatchSnapshot();
   });
 });

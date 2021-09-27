@@ -11,7 +11,7 @@ const InventoryListContainer = () => {
     fetchInventoryList()
       .then((response) => setInvenentory(response))
       .finally(() => setLoading(false));
-  }, [inventory]);
+  }, []);
 
   if (loading) {
     return (
