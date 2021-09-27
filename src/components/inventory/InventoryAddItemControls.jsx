@@ -44,6 +44,7 @@ const InsertControls = ({ inventory, onChange, onSubmit }) => (
       onChange={onChange}
     />
   </form>
+  
 );
 
 InsertControls.propTypes = {
