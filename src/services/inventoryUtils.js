@@ -1,4 +1,4 @@
-export const addInventoryItem = async (data = {}) => {
+export const addInventoryItem = async (data) => {
   const response = await fetch('http://localhost:7890/api/v1/inventory', {
     method: 'POST',
     headers: {

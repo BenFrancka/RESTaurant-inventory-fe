@@ -5,7 +5,13 @@ import { addInventoryItem } from '../services/inventoryUtils';
 
 
 const AddItemToInventory = () => {
-  const [inventory, setInventory] = useState({});
+  const [inventory, setInventory] = useState({
+    itemName: 'type name here',
+    category: 'type category here',
+    itemPrice: 0,
+    totalItems: 0,
+    totalPrice: 0
+  });
 
   const handleChange = ({ target }) => {
     setInventory({ [target.name]: target.value });
@@ -13,7 +19,6 @@ const AddItemToInventory = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //const history = useHistory();
     addInventoryItem(inventory);
   };
 
@@ -21,7 +26,11 @@ const AddItemToInventory = () => {
     <>
       <Header />
       <InsertControls
-        inventory={inventory}
+        itemName={inventory.itemName}
+        category={inventory.category}
+        itemPrice={inventory.itemPrice}
+        totalItems={inventory.totalItems}
+        totalPrice={inventory.totalPrice}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
